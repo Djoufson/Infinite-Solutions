@@ -1,0 +1,350 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color: #273672;
+    --second-color: #1D9A57;
+}
+
+.pin{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    text-decoration: none;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.pin img{
+    transform: rotate(90deg);
+}
+
+/* HEADER */
+.reseaux{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 57px;
+    position: fixed;
+    z-index: 1;
+}
+
+.reseaux div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reseaux div svg{
+    margin: 0 5px;
+}
+
+header nav{
+    position: relative;
+    margin-bottom: 40px;
+    top: 50px;
+    z-index: 0;
+    display: flex;
+}
+
+.logo, .nav-btn{
+    margin: auto;
+    text-align: center;
+    width: 30%;
+}
+
+.liens{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.liens>a{
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+}
+.liens>a:hover{
+    color: rgb(78, 78, 78);
+}
+
+.contact-btn{
+    border: none;
+    text-decoration: none;
+    padding: 9px 17px;
+    background-color: var(--second-color);
+    border-radius: 5px;
+    color: white;
+}
+.contact-btn:hover{
+    color: white;
+}
+
+
+
+/* MAIN */
+section{
+    padding: 60px;
+}
+/* Slider */
+.slider{
+    padding: 0;
+    height: 90vh;
+    background-image: url(../RESOURCES/IMAGES/slider_img.png);
+    background-size:cover;
+    display: flex;
+    color: white;
+}
+
+.slider>button{
+    border: none;
+    background-color: transparent;
+    padding: 50px;
+}
+.slider>button:hover{
+    background-color: rgba(0, 0, 0, 0.158);
+    transition: 0.4s all ease-in-out;
+}
+
+.slider-body{
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+}
+
+.slider-body h1{
+    font-size: 5em;
+    margin-bottom: 40px;
+}
+.slider-body p{
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+/* Qui sommes nous */
+.qui{
+    height: 100vh;
+    background-image: url(../RESOURCES/IMAGES/illustration_qui_somme_nous.png), url(../RESOURCES/IMAGES/Maskgroup.png),linear-gradient(181.22deg, #FFFFFF 2.69%, #BCC1D3 94.89%);;
+    background-repeat: no-repeat;
+    background-position: right bottom, left bottom;
+    position: relative;    
+}
+
+.qui div{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Services */
+.services{
+    background-color: #F1F1F1;
+}
+.service-section{
+    display: flex;
+    margin: 50px;
+}
+
+.service-section>div{
+    padding: 60px;
+    margin: auto;
+    width: 50%;
+}
+
+.service-section>img{
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.service-section button, .submit button{
+    padding: 13px 40px;
+    border: none;
+    background-color: #68BB8E;
+    color: white;
+}
+
+.service-section button:hover, .submit button:hover{
+    background-color: #5ba37b;
+    transition: 0.2s all ease-in-out;
+}
+
+.service-section h3{
+    font-size: 1.9em;
+}
+
+/* Formations */
+.formations{
+    text-align: center;
+    color: white;
+    height: 100vh;
+    background-color: var(--main-color);
+    background-image: url(../RESOURCES/SVG/patter_desktop_left.svg), url(../RESOURCES/SVG/pattern_desktop.svg);
+    background-position: right top, left bottom;
+    background-size: 40% auto;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.formations-text{
+    width: 60%;
+    margin: auto;
+}
+
+.formations svg{
+    position: absolute;
+    z-index: 0;
+}
+
+
+/* Realisations */
+.realisations{
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    height: 100vh;
+    background-color: #E9EBF1;
+}
+.realisations-items{
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    position: absolute;
+}
+.realisations-items h3{
+    font-size: 40px;
+}
+
+.realisations-items>div{
+    text-align: center;
+    width: 25%;
+}
+.realisations>p{
+    width: 60%;
+    margin: auto;
+}
+.img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.img:hover{
+    transform: translateY(-10px);
+    transition: 0.5s all ease-in-out;
+}
+
+
+/* Travaux */
+.travaux{
+    height: 100vh;
+}
+/* Technologies */
+
+.arbre{
+    position: relative;
+    height: 80vh;
+    padding: 50px;
+}
+
+.arbre>div{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0px 6px 7px 1px rgba(0, 0, 0, 0.11);
+}
+
+.arbre .logo{
+    width: 419px;
+    height: 207px;
+    border-radius: 0;
+    box-shadow: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.laravel{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nodejs{
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.javascript{
+    top: 20%;
+    left: 15%;
+}
+
+.git-hub{
+    right: 15%;
+    top: 20%;
+}
+
+.html{
+    right: 15%;
+    bottom: 20%;
+}
+
+.autre{
+    bottom: 20%;
+    left: 15%;
+}
+
+/* Contactez Nous */
+.contactez-nous{
+    background: linear-gradient(132.26deg, #E8F5EE 12.09%, #BCC1D3 92.19%);
+}
+.contactez-nous .container{
+    display: flex;
+}
+
+.contactez-nous .text, .form{
+    width: 50%;
+    padding: 50px;
+    margin: auto;
+}
+
+.form form{
+    width: 100%;
+}
+
+label{
+    display: block;
+}
+
+.input{
+    display: flex;
+    margin: 5px 0 10px 0;
+}
+
+.input span{
+    margin: auto 5px;
+    color: rgb(124, 5, 5);
+}
+
+.input input, textarea{
+    width: 90%;
+    border: none;
+    padding: 10px;
+}
+
+.submit{
+    text-align: center;
+    padding: 15px;
+}
