@@ -8,6 +8,11 @@
     scroll-behavior: smooth;
 }
 
+@keyframes description {
+    form{bottom: 100%;}
+    to{bottom: 90%;}
+}
+
 body{
     overflow-x: hidden;
 }
@@ -61,7 +66,10 @@ header>nav{
 .logo, .nav-btn{
     margin: auto;
     text-align: center;
-    width: 30%;
+    width: 40%;
+}
+.logo img{
+    width: 100%;
 }
 
 .liens{
@@ -121,8 +129,23 @@ header>nav{
         padding:5px;
     }
 
+    .logo{
+        width: 50%;
+    }
     #expand{
         display:inline-block;
+    }
+
+    #services, #services .service-section, #services img{
+        display: block;
+    }
+    #services img{
+        float: inline-start;
+        width: 100%;
+    }
+
+    #services.service-section>div{
+        padding: 0;
     }
 }
 
@@ -189,11 +212,11 @@ section{
 }
 .service-section{
     display: flex;
-    margin: 50px;
+    margin: 50px 0;
 }
 
-.service-section>div{
-    padding: 60px;
+.service-section div{
+    padding: 0;
     margin: auto;
     width: 50%;
 }
@@ -220,6 +243,35 @@ section{
     font-size: 1.9em;
 }
 
+@media only screen and (max-width: 800px) {
+    #services, #services .service-section, #services img{
+        display: block;
+    }
+    #services img{
+        width: 100%;
+        margin-top: 10%;
+        position: absolute;
+        top: 0;
+    }
+
+    #services h3, #services button{
+        margin: 20px 0;
+    }
+
+
+    .service-section div{
+        width: 100%;
+        padding: 0;
+        margin: auto 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .service-section{
+        position: relative;
+        height: 500px;
+    }
+}
 /* Formations */
 .formations{
     text-align: center;
@@ -273,8 +325,8 @@ section{
     margin: auto;
 }
 .img{
-    width: 140px;
-    height: 140px;
+    width: 42%;
+    height: 42%;
     border-radius: 50%;
     margin: auto;
     margin-bottom: 20px;
@@ -285,10 +337,75 @@ section{
     transition: 0.5s all ease-in-out;
 }
 
+@media only screen and (max-width: 800px) {
+    .realisations-items{
+        display: inline-block;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+    }
+    .realisations{
+        text-align: center;
+        padding: 50px;
+        position: relative;
+        height: 200vh;
+        background-color: #E9EBF1;
+    }
 
+    .img{
+        width: 20%;
+    }
+    .realisations-items div{
+        width: auto;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
 /* Travaux */
 .travaux{
     height: 100vh;
+}
+
+.travaux-items>div{
+    background-color: #eee;
+    border-radius: 5px;
+    position: relative;
+}
+.travaux-items>div>button, .parag{
+    position: absolute;
+}
+.travaux-items>div>button{
+    bottom: 100%;
+}
+.parag{
+    top: 100%;
+}
+.travaux-items{
+    margin-top: 20px;
+    display: flex;
+}
+.travaux-items>div{
+    overflow: hidden;
+    width: 30%;
+    height: 250px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .travaux-items{
+        display: block;
+    }
+
+    .travaux-items>div{
+        width: 95%;
+        margin-bottom: 10px;
+    }
+    
+    .travaux{
+        height: auto;
+    }
 }
 /* Technologies */
 
@@ -300,15 +417,15 @@ section{
 
 .arbre>div{
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 9%;
+    height: 9%;
     border-radius: 50%;
     box-shadow: 0px 6px 7px 1px rgba(0, 0, 0, 0.11);
 }
 
 .arbre .logo{
-    width: 419px;
-    height: 207px;
+    width: 20%;
+    height: 40%;
     border-radius: 0;
     box-shadow: none;
     top: 50%;
