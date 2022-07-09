@@ -8,10 +8,6 @@
     scroll-behavior: smooth;
 }
 
-@keyframes description {
-    form{bottom: 100%;}
-    to{bottom: 90%;}
-}
 
 body{
     overflow-x: hidden;
@@ -20,6 +16,7 @@ body{
     --main-color: #273672;
     --second-color: #1D9A57;
 }
+
 
 .pin{
     position: fixed;
@@ -66,7 +63,7 @@ header>nav{
 .logo, .nav-btn{
     margin: auto;
     text-align: center;
-    width: 40%;
+    width: 30%;
 }
 .logo img{
     width: 100%;
@@ -109,9 +106,6 @@ header>nav{
 
 
 @media only screen and (max-width: 800px) {
-    .slider>button {
-        display: none;
-    }
     .nav-btn{
         display: none;
     }
@@ -155,39 +149,17 @@ section{
 }
 /* Slider */
 .slider{
-    padding: 0;
-    width: 100%;
-    height: 90vh;
-    background-image: url(../RESOURCES/IMAGES/slider_img.png);
-    background-size: auto 100%;
-    display: flex;
-    color: white;
+    padding-top: 0;
+    height: 100vh;
 }
 
-
-.slider>button{
-    border: none;
-    background-color: transparent;
-    padding: 3%;
-}
-.slider>button:hover{
-    background-color: rgba(0, 0, 0, 0.158);
-    transition: 0.4s all ease-in-out;
-}
-
-.slider-body{
+.content{
     text-align: center;
-    padding: 8%;
-    margin: auto;
-}
-
-.slider-body h1{
-    font-size: 5em;
-    margin: auto;
-}
-.slider-body p{
-    font-size: 1.2em;
-    margin-bottom: 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /* Qui sommes nous */
 .qui{
@@ -212,12 +184,12 @@ section{
 }
 .service-section{
     display: flex;
-    margin: 50px 0;
+    margin: 60px 0;
 }
 
 .service-section div{
     padding: 0;
-    margin: auto;
+    margin: auto 10px;
     width: 50%;
 }
 
@@ -227,14 +199,14 @@ section{
     border-radius: 15px;
 }
 
-.service-section button, .submit button{
+.service-section button, .submit button, .button{
     padding: 13px 40px;
     border: none;
     background-color: #68BB8E;
     color: white;
 }
 
-.service-section button:hover, .submit button:hover{
+.service-section button:hover, .submit button:hover, .button:hover{
     background-color: #5ba37b;
     transition: 0.2s all ease-in-out;
 }
@@ -384,6 +356,7 @@ section{
 }
 .travaux-items{
     margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
 }
 .travaux-items>div{
@@ -503,4 +476,12 @@ label{
 .submit{
     text-align: center;
     padding: 15px;
+}
+
+.footer-container{
+    display: flex;
+}
+
+.footer-container:first{
+    width: 40%;
 }
