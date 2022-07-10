@@ -1,0 +1,81 @@
+<?php
+    $lang =[
+        "title" => "Infinite Solutions",
+        "home"  => "Acceuil",
+        "service" => "Services",
+        "formation" => "Formation",
+        "realisation" => "Realisations",
+        "lang_en" => "English",
+        "lang_fr" => "Francais",
+        "contact" => "Nous Contacter",
+        
+        "content-1" => "Automatisez vos activites",
+        "content-1-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "content-2" => "Automatisez vos activites",
+        "content-2-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "content-3" => "Automatisez vos activites",
+        "content-3-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        
+        "qui" => "Qui sommes nous",
+        "qui-1-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "qui-2-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        
+        "services" => "Nos services",
+        "services-1" => "Developpement D'application",
+        "services-1-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "services-1-b" => "En Savoir Plus",
+        "services-2" => "Design Graphique",
+        "services-2-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "services-2-b" => "En Savoir Plus",
+        "services-3" => "Intelligence Artificielle",
+        "services-3-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "services-3-b" => "En Savoir Plus",
+        
+        "formations" => "Nos formations",
+        "formations-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        
+        "realise" => "Plus de 30 Applications realisees",
+        "realise-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "realise-1" => "Applications Web",
+        "realise-2" => "Applications Mobiles",
+        "realise-3" => "Applications PC",
+        "realise-4" => "Refontes & Urbanisation",
+        
+        "travaux" => "Nos recents travaux",
+        "travaux-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "travaux-1-b" => "Application Mobiles",
+        "travaux-1" => "KENTS Fashion",
+        "travaux-1-p" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, natus facilis expedita voluptatem",
+        "travaux-2-b" => "Design Graphique",
+        "travaux-2" => "KENTS Fashion",
+        "travaux-2-p" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, natus facilis expedita voluptatem",
+        "travaux-3-b" => "Design Graphique",
+        "travaux-3" => "KENTS Fashion",
+        "travaux-3-p" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, natus facilis expedita voluptatem",
+        
+        "consult" => "Consulter nos travaux",
+        
+        "technologies" => "Nos technologies",
+        "technologies-p" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione odio vitae quisquam suscipit repellat cumque fugiat velit numquam nesciunt!",
+        
+        "contacter-nous" => "Contactez nous",
+        "contacter-nous-p" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam labore similique eaque reprehenderit illo consequatur sapiente dolore quod in, ab eligendi eos animi at esse quibusdam, distinctio adipisci. Consectetur, dolor.",
+        "contacter-nous-name" => "Nom",
+        "contacter-nous-firstname" => "Prenom",
+        "contacter-nous-email" => "E-mail",
+        "contacter-nous-phone" => "Telephone",
+        "contacter-nous-message" => "Message",
+        "contacter-nous-send" => "Envoyer",
+        
+        "footer-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat soluta, possimus, omnis voluptas nam eaque adipisci earum expedita hic culpa commodi alias unde eligendi eos architecto? Aspernatur tempore reiciendis fugit! Nostrum saepe quae voluptates, minima repudiandae similique, accusantium suscipit non nulla enim totam! Sunt vitae dolor iusto? Fuga, doloremque placeat?",
+        "footer-enterprise" => "L'Entreprise",
+        "footer-about" => "A Propos",
+        "footer-blog" => "Blog",
+        "footer-projet" => "Projet",
+        "footer-team" => "Equipe",
+        "footer-contact" => "Contact",
+        "footer-liens" => "Liens Utiles",
+        "footer-liens-1" => "Confidentialite",
+        "footer-liens-2" => "Termes & Consitions"
+    ]
+?>
