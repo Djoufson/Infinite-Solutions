@@ -61,7 +61,9 @@ include "FUNCTION/contact.func.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/main.css">
-    <script src="JS/main.js"></script>
+    <link rel="stylesheet" href="CSS/second.css">
+
+
     <title><?= $lang["title"] ?></title>
 </head>
 <body>
@@ -141,45 +143,47 @@ include "FUNCTION/contact.func.php";
                 </button>
               </div>
         </section>
-        <section class="qui" id="qui">
-            <h1><?= $lang["qui"] ?></h1>
+        <section class="qui" id="qui" >
+            <h1 data-aos="fade-up"  data-aos-duration="1000"><?= $lang["qui"] ?></h1>
             <div>
-                <p><?= $lang["qui-1-p"] ?></p>
-                <p><?= $lang["qui-2-p"] ?></p>
+                <p data-aos="fade-up"  data-aos-duration="1500"><?= $lang["qui-1-p"] ?></p>
+                
             </div>
         </section>
         <section class="services" id="services">
-            <h1><?= $lang["services"] ?></h1>
-            <div class="service-section">
-                <div>
-                    <h3><?= $lang["services-1"] ?></h3>
-                    <p><?= $lang["services-1-p"] ?></p>
-                    <button><?= $lang["services-1-b"] ?></button>
+            <h1 data-aos="fade-up" data-aos-duration="1000"><?= $lang["services"] ?></h1>
+            <div class="service-section " >
+                <div data-aos="fade-up">
+                    <h3 data-aos="fade-up" data-aos-duration="1200"><?= $lang["services-1"] ?></h3>
+                    <p data-aos="fade-up" data-aos-duration="1300"><?= $lang["services-1-p"] ?></p>
+                    <p data-aos="fade-up" data-aos-duration="1350"><?= $lang["service-1-p-2"] ?></p>
+                    <button data-aos="fade-up" data-aos-duration="1350"><?= $lang["services-1-b"] ?></button>
                 </div>
-                <img src="RESOURCES/IMAGES/slider_img.png" alt="">
+                <img src="RESOURCES/IMAGES/slider_img.png" alt="" data-aos="fade-left" data-aos-duration="1200" >
             </div>
             <div class="service-section">
-                <img src="RESOURCES/IMAGES/slider_img.png" alt="">
+                <img src="RESOURCES/IMAGES/slider_img.png" data-aos="fade-right" data-aos-duration="1400" alt="">
                 <div>
-                    <h3><?= $lang["services-2"] ?></h3>
-                    <p><?= $lang["services-2-p"] ?></p>
-                    <button><?= $lang["services-2-b"] ?></button>
+                    <h3 data-aos="fade-up" data-aos-duration="1000"><?= $lang["services-2"] ?></h3>
+                    <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["services-2-p"] ?></p>
+                    <button data-aos="fade-up" data-aos-duration="1300"><?= $lang["services-2-b"] ?></button>
                 </div>
             </div>
             <div class="service-section">
                 <div>
-                    <h3><?= $lang["services-3"] ?></h3>
-                    <p><?= $lang["services-3-p"] ?></p>
-                    <button><?= $lang["services-3-b"] ?></button>
+                    <h3 data-aos="fade-up" data-aos-duration="1000"><?= $lang["services-3"] ?></h3>
+                    <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["services-3-p"] ?></p>
+                    <button data-aos="fade-up" data-aos-duration="1300"><?= $lang["services-3-b"] ?></button>
                 </div>
-                <img src="RESOURCES/IMAGES/slider_img.png" alt="">
+                <img src="RESOURCES/IMAGES/slider_img.png" alt="" data-aos="fade-left" data-aos-duration="1400">
             </div>
+
         </section>
         <section class="formations" id="formations">
             <div>
-                <div class="formations-text">
-                <h1><?= $lang["formations"] ?></h1>
-                <p><?= $lang["formations-p"] ?></p>
+                <div class="formations-text" >
+                <h1 data-aos="fade-up" data-aos-duration="1000"><?= $lang["formations"] ?></h1>
+                <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["formations-p"] ?></p>
                 </div>
                 <div class="carousel">
                     <div class="carousel-item"></div>
@@ -190,37 +194,37 @@ include "FUNCTION/contact.func.php";
             </div>
         </section>
         <section class="realisations" id="realisations">
-            <h1><?= $lang["realise"] ?></h1>
-            <p><?= $lang["realise-p"] ?></p>
+            <h1 data-aos="fade-up"data-aos-duration="1000" ><?= $lang["realise"] ?></h1>
+            <p data-aos="fade-up"data-aos-duration="1100"><?= $lang["realise-p"] ?></p>
             <div class="realisations-items">
-                <div>
-                    <img class="img" src="RESOURCES/IMAGES/icon_app_web.png" alt="">
-                    <h3>11</h3>
-                    <p><?= $lang["realise-1"] ?></p>
+                <div  >
+                    <img data-aos="fade-up" data-aos-duration="1000" class="img" src="RESOURCES/IMAGES/icon_app_web.png" alt="" data-tilt data-tilt-max="50" data-tilt-speed="10000" data-tilt-perspective="500"  data-tilt-scale="1.3" data-aos-duration="1000">
+                    <h3 data-aos="fade-up" data-aos-duration="1000">11</h3>
+                    <p data-aos="fade-up" data-aos-duration="1000"><?= $lang["realise-1"] ?></p>
+                </div>
+                <div >
+                    <img data-aos="fade-up" data-aos-duration="1400" data-tilt data-tilt-max="50" data-aos-duration="1200" data-tilt-speed="10000" data-tilt-perspective="500"  data-tilt-scale="1.3" class="img" src="RESOURCES/IMAGES/icon_capp_mobile.png" alt="">
+                    <h3 data-aos="fade-up" data-aos-duration="1200">14</h3>
+                    <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["realise-2"] ?></p>
+                </div>
+                <div  >
+                    <img data-aos="fade-up" data-aos-duration="1300" data-tilt data-tilt-max="50" data-tilt-speed="10000" data-tilt-perspective="500"  data-tilt-scale="1.3" class="img" src="RESOURCES/IMAGES/icon_app_desktop.png" alt="">
+                    <h3 data-aos="fade-up" data-aos-duration="1300">18</h3>
+                    <p data-aos="fade-up" data-aos-duration="1300"><?= $lang["realise-3"] ?></p>
                 </div>
                 <div>
-                    <img class="img" src="RESOURCES/IMAGES/icon_capp_mobile.png" alt="">
-                    <h3>14</h3>
-                    <p><?= $lang["realise-2"] ?></p>
-                </div>
-                <div>
-                    <img class="img" src="RESOURCES/IMAGES/icon_app_desktop.png" alt="">
-                    <h3>18</h3>
-                    <p><?= $lang["realise-3"] ?></p>
-                </div>
-                <div>
-                    <img class="img" src="RESOURCES/IMAGES/icon_redesign.png" alt="">
-                    <h3>3</h3>
-                    <p><?= $lang["realise-4"] ?></p>
+                    <img data-aos="fade-up" data-aos-duration="1400" data-tilt data-tilt-max="50" data-tilt-speed="10000" data-tilt-perspective="500"  data-tilt-scale="1.3" class="img" src="RESOURCES/IMAGES/icon_redesign.png" alt="">
+                    <h3 data-aos="fade-up" data-aos-duration="1400">3</h3>
+                    <p data-aos="fade-up" data-aos-duration="1400"><?= $lang["realise-4"] ?></p>
                 </div>
             </div>
         </section>
         <section class="travaux">
-            <h1><?= $lang["travaux"] ?></h1>
-            <p><?= $lang["travaux-p"] ?></p>
+            <h1 data-aos="fade-up" data-aos-duration="1200"><?= $lang["travaux"] ?></h1>
+            <p data-aos="fade-up" data-aos-duration="1300"><?= $lang["travaux-p"] ?></p>
             <div class="travaux-items">
                 <div>
-                    <button><?= $lang["travaux-1-b"] ?></button>
+                    <button ><?= $lang["travaux-1-b"] ?></button>
                     <div class="parag">
                         <h3><?= $lang["travaux-1"] ?></h3>
                         <p>
@@ -247,14 +251,14 @@ include "FUNCTION/contact.func.php";
                     </div>
                 </div>
             </div>
-            <button class="button"><?= $lang["consult"] ?></button>
+            <button data-aos="fade-up" data-aos-duration="1400" class="button"><?= $lang["consult"] ?></button>
         </section>
         <section class="technologies">
-            <h1><?= $lang["technologies"] ?></h1>
-            <p><?= $lang["technologies-p"] ?></p>
+            <h1 data-aos="fade-up" data-aos-duration="1200"><?= $lang["technologies"] ?></h1>
+            <p data-aos="fade-up" data-aos-duration="1300"><?= $lang["technologies-p"] ?></p>
             <div class="arbre">
                 <div class="logo">
-                    <img src="RESOURCES/IMAGES/logo.png" alt="">
+                    <img data-tilt data-tilt-max="50" data-tilt-speed="10000" data-tilt-perspective="500"  data-tilt-scale="1.3" src="RESOURCES/IMAGES/logo.png" alt="">
                 </div>
                 <div class="laravel"></div>
                 <div class="javascript"></div>
@@ -267,24 +271,24 @@ include "FUNCTION/contact.func.php";
         <section class="contactez-nous" id="contactez-nous">
             <div class="container">
                 <div class="text">
-                    <h1><?= $lang["contacter-nous"] ?></h1>
-                    <p><?= $lang["contacter-nous-p"] ?></p>
+                    <h1 data-aos="fade-up" data-aos-duration="1000"><?= $lang["contacter-nous"] ?></h1>
+                    <p data-aos="fade-up" data-aos-duration="1300"><?= $lang["contacter-nous-p"] ?></p>
                 </div>
                 <div class="form">
                     <form action="" method="post">
-                        <label for="name"><?= $lang["contacter-nous-name"] ?></label>
+                        <label for="name"><?= $lang["contacter-nous-name"] ?><span>*</span></label>
                         <div class="input">
-                            <input type="text" id="name" name="name" ><span>*</span>
+                            <input type="text" id="name" name="name" >
                         </div>
 
-                        <label for="firstName"><?= $lang["contacter-nous-firstname"] ?></label>
+                        <label for="firstName"><?= $lang["contacter-nous-firstname"] ?><span>*</span></label>
                         <div class="input">
-                            <input type="text" name="firstName" id="firstName" ><span>*</span>
+                            <input type="text" name="firstName" id="firstName" >
                         </div>
 
-                        <label for="email"><?= $lang["contacter-nous-email"] ?></label>
+                        <label for="email"><?= $lang["contacter-nous-email"] ?><span>*</span></label>
                         <div class="input">
-                            <input type="email" name="email" id="email" ><span>*</span>
+                            <input type="email" name="email" id="email" >
                         </div>
 
                         <label for="phone"><?= $lang["contacter-nous-phone"] ?></label>
@@ -292,9 +296,9 @@ include "FUNCTION/contact.func.php";
                             <input type="text" name="phone" id="phone">
                         </div>
 
-                        <label for="message"><?= $lang["contacter-nous-message"] ?></label>
+                        <label for="message"><?= $lang["contacter-nous-message"] ?><span>*</span></label>
                         <div class="input">
-                            <textarea name="message" id="message" cols="30" rows="10" ></textarea><span>*</span>
+                            <textarea name="message" id="message" cols="30" rows="10" ></textarea>
                         </div>
                         
                         <div class="submit">
@@ -340,5 +344,13 @@ include "FUNCTION/contact.func.php";
             <p>&copy; Infinite Solutions | Copyright 2022</p>
         </div>
     </footer>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="./JS/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>

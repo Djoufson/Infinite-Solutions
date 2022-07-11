@@ -1,0 +1,35 @@
+h1{
+    margin-bottom: 60px;
+    font-size: 64px;
+    font-weight: 900;
+    background-image: linear-gradient(-45deg, #1F9959, #273672);
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.slider h1{
+    color: #eee;
+    font-weight: 500;
+    font-size: 45px;
+    -webkit-text-fill-color: white;
+}
+
+.formations h1{
+    -webkit-text-fill-color: #97D1B2;
+}
+section, #footer{
+    padding: 115px;
+    max-width: 1510px;
+    margin: auto;
+}
+
+.service-section{
+    gap: 45px;
+    margin-bottom: 50px;
+}
+
+nav{
+    z-index: 3;
+}
