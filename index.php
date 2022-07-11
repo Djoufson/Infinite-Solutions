@@ -335,6 +335,7 @@ include "FUNCTION/contact.func.php";
         <div class="reseaux-sociaux">
 
         </div>
+        <hr>
         <div class="copyright">
             <p>&copy; Infinite Solutions | Copyright 2022</p>
         </div>
