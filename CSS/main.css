@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-family: sans-serif;
     list-style: none;
     scroll-behavior: smooth;
 }
@@ -17,6 +16,13 @@ body{
     --second-color: #1D9A57;
 }
 
+h1{
+    font-size: 5rem;
+}
+
+p, div{
+    font-size: large;
+}
 
 .pin{
     position: fixed;
@@ -37,8 +43,7 @@ body{
     background-color: var(--main-color);
     width: 100%;
     height: 57px;
-    position: fixed;
-    z-index: 1;
+    position: relative;
 }
 
 .reseaux div{
@@ -53,11 +58,7 @@ body{
 }
 
 header>nav{
-    position: relative;
-    margin-bottom: 40px;
-    top: 50px;
-    z-index: 0;
-    display: flex;
+    z-index: 1;
 }
 
 .logo, .nav-btn{
@@ -145,8 +146,15 @@ header>nav{
 
 /* MAIN */
 section{
-    padding: 60px;
+    padding: 110px;
 }
+
+@media only screen and(max-width: 500px) {
+    section{
+        padding: 5px 0;
+    }
+}
+
 /* Slider */
 .slider{
     padding-top: 0;
@@ -178,6 +186,12 @@ section{
     transform: translateY(-50%);
 }
 
+@media only screen and (max-width: 1100px) {
+    #qui div{
+        width: 80%;
+    }
+}
+
 /* Services */
 .services{
     background-color: #F1F1F1;
@@ -194,8 +208,7 @@ section{
 }
 
 .service-section>img{
-    width: 50%;
-    height: auto;
+    width: 48%;
     border-radius: 15px;
 }
 
@@ -216,32 +229,39 @@ section{
 }
 
 @media only screen and (max-width: 800px) {
-    #services, #services .service-section, #services img{
+    #services .service-section{
         display: block;
+        height: 80vw;
+        position: relative;
     }
-    #services img{
-        width: 100%;
-        margin-top: 10%;
+
+    .service-section img{
         position: absolute;
         top: 0;
     }
 
-    #services h3, #services button{
-        margin: 20px 0;
-    }
-
-
-    .service-section div{
-        width: 100%;
-        padding: 0;
-        margin: auto 0;
+    .service-section>div{
         position: absolute;
+        width: 100%;
         bottom: 0;
     }
 
-    .service-section{
+    .service-section h3{
+        font-size: 1.5em;
+    }
+}
+@media only screen and (max-width: 550px) {
+    #services .service-section{
+        display: block;
+        height: 97vw;
         position: relative;
-        height: 500px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    #services .service-section{
+        display: block;
+        height: 117vw;
+        position: relative;
     }
 }
 /* Formations */
@@ -279,7 +299,7 @@ section{
 .realisations-items{
     width: 60%;
     left: 50%;
-    top: 50%;
+    top: 70%;
     transform: translate(-50%, -50%);
     display: flex;
     position: absolute;
@@ -309,7 +329,7 @@ section{
     transition: 0.5s all ease-in-out;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1131px) {
     .realisations-items{
         display: inline-block;
         position: absolute;
@@ -333,6 +353,15 @@ section{
         width: auto;
         text-align: center;
         margin-bottom: 10px;
+    }
+        
+    .realisations>p{
+        width: 100%;
+        margin: auto;
+    }
+    .formations-text{
+        width: 100%;
+        margin: auto;
     }
 }
 /* Travaux */
@@ -390,8 +419,8 @@ section{
 
 .arbre>div{
     position: absolute;
-    width: 9%;
-    height: 9%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     box-shadow: 0px 6px 7px 1px rgba(0, 0, 0, 0.11);
 }
@@ -445,7 +474,6 @@ section{
 
 .contactez-nous .text, .form{
     width: 50%;
-    padding: 50px;
     margin: auto;
 }
 
@@ -462,13 +490,18 @@ label{
     margin: 5px 0 10px 0;
 }
 
-.input span{
+.input input:focus, .input textarea:focus{
+    outline: #273672a4 solid 2px;
+    border-radius: 2px;
+}
+
+label span{
     margin: auto 5px;
-    color: rgb(124, 5, 5);
+    color: rgb(177, 19, 19);
 }
 
 .input input, textarea{
-    width: 90%;
+    width: 100%;
     border: none;
     padding: 10px;
 }
@@ -478,10 +511,89 @@ label{
     padding: 15px;
 }
 
+@media only screen and(max-width: 800px) {
+    
+    .container .form{
+        width: 100%;
+        padding: 0;
+    }
+}
+
 .footer-container{
     display: flex;
 }
 
-.footer-container:first{
+.footer-container>div{
+    margin: 5px;
+    padding-right: 40px;
+}
+
+.footer-container .description{
     width: 40%;
+}
+
+.contact svg{
+    margin-right: 15px;
+}
+#footer li{
+    padding: 5px 0;
+}
+
+.description img{
+    height: 100px;
+    padding-bottom: 25px;
+}
+
+#footer h2{
+    color: #4A5789;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+}
+
+#footer ul{
+    padding: 0;
+}
+
+#footer .reseaux-sociaux{
+    text-align: right;
+}
+
+/* .reseaux-sociaux svg path{
+    fill: var(--main-color);
+} */
+@media only screen and (max-width: 1119px) {
+    .footer-container{
+        display: block;
+    }
+    .footer-container .description{
+        width: 100%;
+    }
+    .contactez-nous .container{
+        display: block;
+        width: auto;
+        margin: auto;
+    }
+
+    .contactez-nous .text, .contactez-nous .form{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 2.9rem;
+    }
+
+}
+
+/* Reglementations */
+
+h1{
+    margin-bottom: 20px;
+}
+
+
+/* Mobile */
+@media only screen and(max-width: 800px){
+    h1{
+        font-size: 1.2rem;
+    }
 }
