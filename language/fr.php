@@ -10,11 +10,11 @@
         "contact" => "Nous Contacter",
         
         "content-1" => "Automatisez vos activites",
-        "content-1-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
-        "content-2" => "Automatisez vos activites",
-        "content-2-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
-        "content-3" => "Automatisez vos activites",
-        "content-3-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "content-1-p" => "Vous accompagnez dans votre processus de digitalisation et d’automatisation.",
+        "content-2" => "Innovation et 	Agilité",
+        "content-2-p" => "nous mettons l’innovation au centre de notre démarche  et nous  nous appuyons sur le manifeste agile pour conduire au mieux votre projet.",
+        "content-3" => "Excellence",
+        "content-3-p" => " en toute chose, l’excellence reste notre principale source de motivation.",
         
         "qui" => "Qui sommes nous",
         "qui-1-p" => "Infinite Solutions est une entreprise d'ingénierie informatique et logicielle dont le siège social est situé dans la ville de Douala au Cameroun. Elle a été fondée en 2020 et est composée d’une équipe très dynamique d'enseignants et d'ingénieurs en informatique et  automatique.",
@@ -33,17 +33,17 @@
         "services-3-b" => "En Savoir Plus",
         
         "formations" => "Nos formations",
-        "formations-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "formations-p" => "Parceque l'atteinte de vos objectifs reste votre priorité, nous vous proposons des outils et solutions simples et efficaces pour vos problématiques régulières d'entreprises .",
         
         "realise" => "Plus de 30 Applications realisees",
-        "realise-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "realise-p" => "",
         "realise-1" => "Applications Web",
         "realise-2" => "Applications Mobiles",
         "realise-3" => "Applications PC",
         "realise-4" => "Refontes & Urbanisation",
         
         "travaux" => "Nos recents travaux",
-        "travaux-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
+        "travaux-p" => "Nos clients sont satisfaits de la qualité de nos services. Ci dessous les dernières prestations effectuées et livrées pour nos clients",
         "travaux-1-b" => "Application Mobiles",
         "travaux-1" => "KENTS Fashion",
         "travaux-1-p" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, natus facilis expedita voluptatem",
@@ -57,10 +57,9 @@
         "consult" => "Consulter nos travaux",
         
         "technologies" => "Nos technologies",
-        "technologies-p" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione odio vitae quisquam suscipit repellat cumque fugiat velit numquam nesciunt!",
-        
+        "technologies-p" => "Nous utlisons les technologies et les outils modernes de reference pour la bonne gestion et la conception de vos projet",
         "contacter-nous" => "Contactez nous",
-        "contacter-nous-p" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam labore similique eaque reprehenderit illo consequatur sapiente dolore quod in, ab eligendi eos animi at esse quibusdam, distinctio adipisci. Consectetur, dolor.",
+        "contacter-nous-p" => "Nous serions ravis de discuter de la manière dont nous pouvons vous aider.",
         "contacter-nous-name" => "Nom",
         "contacter-nous-firstname" => "Prenom",
         "contacter-nous-email" => "E-mail",
@@ -68,7 +67,7 @@
         "contacter-nous-message" => "Message",
         "contacter-nous-send" => "Envoyer",
         
-        "footer-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat soluta, possimus, omnis voluptas nam eaque adipisci earum expedita hic culpa commodi alias unde eligendi eos architecto? Aspernatur tempore reiciendis fugit! Nostrum saepe quae voluptates, minima repudiandae similique, accusantium suscipit non nulla enim totam! Sunt vitae dolor iusto? Fuga, doloremque placeat?",
+        "footer-p" =>"Une solution à votre problème, une expérience pour votre entreprise. Nous construisons le futur pour votre entreprise tout simplement.",
         "footer-enterprise" => "L'Entreprise",
         "footer-about" => "A Propos",
         "footer-blog" => "Blog",

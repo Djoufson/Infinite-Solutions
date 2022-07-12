@@ -86,7 +86,7 @@ include "FUNCTION/contact.func.php";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/second.css">
-
+    <link rel="stylesheet" href="CSS/paralax.css">
 
     <title><?= $lang["title"] ?></title>
 </head>
@@ -210,13 +210,21 @@ include "FUNCTION/contact.func.php";
               </div>
         </section>
         <section class="qui" id="qui" >
+            <svg class="ellipse1" width="330" height="330" viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:multiply">
+                <circle cx="165" cy="165" r="165" fill="#B9E0CB"/>
+                </g>
+            </svg>
+            <svg class="ellipse2" width="401" height="401" viewBox="0 0 401 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200.5" cy="200.5" r="200.5" fill="#1C2651" fill-opacity="0.35"/>
+            </svg>
             <h1 data-aos="fade-up"  data-aos-duration="1000"><?= $lang["qui"] ?></h1>
             <div>
                 <p data-aos="fade-up"  data-aos-duration="1500"><?= $lang["qui-1-p"] ?></p>
                 
             </div>
         </section>
-        <section class="services" id="services">
+        <section class="services" id="services"> 
             <h1 data-aos="fade-up" data-aos-duration="1000"><?= $lang["services"] ?></h1>
             <div class="service-section " >
                 <div data-aos="fade-up">
@@ -250,26 +258,10 @@ include "FUNCTION/contact.func.php";
                 <h1 data-aos="fade-up" data-aos-duration="1000"><?= $lang["formations"] ?></h1>
                 <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["formations-p"] ?></p>
                 </div>
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="RESOURCES/IMAGES/slider_img.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="RESOURCES/IMAGES/slider_img.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="RESOURCES/IMAGES/slider_img.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
-                    </a>
+                <div class="formations-items">
+                    <div class="formations-item formations-item-1"></div>
+                    <div class="formations-item formations-item-2"></div>
+                    <div class="formations-item formations-item-3"></div>
                 </div>
             </div>
         </section>
@@ -300,10 +292,8 @@ include "FUNCTION/contact.func.php";
         </section>
         <section class="travaux">
             <h1 data-aos="fade-up" data-aos-duration="1200"><?= $lang["travaux"] ?></h1>
-            <p data-aos="fade-up" data-aos-duration="1600"><?= $lang["travaux-p"] ?></p>
             <div class="travaux-items">
                 <div>
-                    <button ><?= $lang["travaux-1-b"] ?></button>
                     <div class="parag">
                         <h3><?= $lang["travaux-1"] ?></h3>
                         <p>
@@ -312,7 +302,6 @@ include "FUNCTION/contact.func.php";
                     </div>
                 </div>
                 <div>
-                    <button><?= $lang["travaux-2-b"] ?></button>
                     <div class="parag">
                         <h3><?= $lang["travaux-2-"] ?></h3>
                         <p>
@@ -321,7 +310,6 @@ include "FUNCTION/contact.func.php";
                     </div>
                 </div>
                 <div>
-                    <button><?= $lang["travaux-3-b"] ?></button>
                     <div class="parag">
                         <h3><?= $lang["travaux-3"] ?></h3>
                         <p>
@@ -337,7 +325,7 @@ include "FUNCTION/contact.func.php";
             <p data-aos="fade-up" data-aos-duration="1600"><?= $lang["technologies-p"] ?></p>
             <div class="arbre">
                 <div class="logo">
-                    <img data-tilt data-tilt-max="50" data-tilt-speed="10000" data-tilt-perspective="500"  data-tilt-scale="1.3" src="RESOURCES/IMAGES/logo.png" alt="">
+                    <img data-tilt data-tilt-max="50" data-tilt-speed="10000" data-tilt-perspective="500" data-tilt-scale="1.3" src="RESOURCES/IMAGES/logo.png" alt="">
                 </div>
                 <div class="laravel"></div>
                 <div class="javascript"></div>
@@ -415,6 +403,7 @@ include "FUNCTION/contact.func.php";
                 </ul>
             </div>
             <div class="contacts">
+                <h2>Contacts</h2>
                 <ul>
                     <li>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

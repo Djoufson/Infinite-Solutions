@@ -170,14 +170,6 @@ section{
     transform: translate(-50%, -50%);
 }
 /* Qui sommes nous */
-.qui{
-    height: 100vh;
-    background-image: url(../RESOURCES/IMAGES/illustration_qui_somme_nous.png), url(../RESOURCES/IMAGES/Maskgroup.png),linear-gradient(181.22deg, #FFFFFF 2.69%, #BCC1D3 94.89%);;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: right bottom, left bottom;
-    position: relative;    
-}
 
 .qui div{
     width: 50%;
@@ -298,9 +290,9 @@ section{
     background-color: #E9EBF1;
 }
 .realisations-items{
-    width: 60%;
+    width: 80%;
     left: 50%;
-    top: 70%;
+    top: 60%;
     transform: translate(-50%, -50%);
     display: flex;
     position: absolute;
@@ -373,26 +365,37 @@ section{
 .travaux-items>div{
     background-color: #eee;
     border-radius: 5px;
+    padding: 10px;
     position: relative;
 }
 .travaux-items>div>button, .parag{
     position: absolute;
 }
 .travaux-items>div>button{
+    width: 164px;
+    border: none;
+    background: #1A8C4F;
+    border-radius: 30px;
     bottom: 100%;
 }
 .parag{
     top: 100%;
 }
+
+.parag p{
+    font-size: 18px;
+}
+
 .travaux-items{
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
 }
 .travaux-items>div{
+    font-size: 18px;
     overflow: hidden;
     width: 30%;
-    height: 250px;
+    height: 450px;
     margin: auto;
 }
 
@@ -518,6 +521,10 @@ label span{
         width: 100%;
         padding: 0;
     }
+}
+
+#footer p{
+    font-size: 19px;
 }
 
 .footer-container{

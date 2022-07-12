@@ -36,6 +36,12 @@ section, #footer{
 
 .navbar-nav{
     text-align: center;
+    gap: 20px;
+    padding-left: 100px;
+    margin: auto;
+}
+
+.nav-item{
     margin: auto;
 }
 
@@ -46,7 +52,7 @@ section, #footer{
     background-image: linear-gradient(0deg, #2736729f, #FFFFFF);
 }
 
-.navbar-brand{
+.navbar-brand svg{
     display: block;
     text-align: center;
 }
@@ -62,6 +68,12 @@ p{
         top: 760px;
     }
 
+    .navbar-nav{
+        text-align: center;
+        gap: 20px;
+        padding-left: 0;
+    }
+    
     h1{
         font-size: 40px;
     }
@@ -106,4 +118,24 @@ p{
 
 @media only screen and (max-width: 350px) {
     
+}
+
+
+/* Suplement */
+.travaux-items button{
+    padding: 5px 10px;
+    font-size: 15px;
+    height: auto;
+    color: white;
+}
+.travaux-items>div:hover button{
+    transform: translateY(70px);
+    transition: 0.4s all ease-out;
+}
+.travaux-items>div:hover{
+    transition: 0.4s all ease-in;
+}
+.travaux-items>div:hover div{
+    transform: translateY(-180px);
+    transition: 0.4s all ease-in;
 }
