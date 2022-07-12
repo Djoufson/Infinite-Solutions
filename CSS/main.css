@@ -365,7 +365,6 @@ section{
 .travaux-items>div{
     background-color: #eee;
     border-radius: 5px;
-    padding: 10px;
     position: relative;
 }
 .travaux-items>div>button, .parag{
@@ -380,6 +379,10 @@ section{
 }
 .parag{
     top: 100%;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.438);
 }
 
 .parag p{

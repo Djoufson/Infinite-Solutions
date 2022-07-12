@@ -10,6 +10,7 @@ h1{
 
 h3{
     font-weight: 600;
+    margin: 10px 0;
 }
 
 .slider h1{
@@ -57,9 +58,6 @@ section, #footer{
     text-align: center;
 }
 
-p{
-    font-size: 23px;
-}
 
 /* Responsive */
 
@@ -122,12 +120,6 @@ p{
 
 
 /* Suplement */
-.travaux-items button{
-    padding: 5px 10px;
-    font-size: 15px;
-    height: auto;
-    color: white;
-}
 .travaux-items>div:hover button{
     transform: translateY(70px);
     transition: 0.4s all ease-out;

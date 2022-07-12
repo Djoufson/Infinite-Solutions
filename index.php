@@ -259,9 +259,9 @@ include "FUNCTION/contact.func.php";
                 <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["formations-p"] ?></p>
                 </div>
                 <div class="formations-items">
-                    <div class="formations-item formations-item-1"></div>
-                    <div class="formations-item formations-item-2"></div>
-                    <div class="formations-item formations-item-3"></div>
+                    <div class="formations-item formations-item-1" style="background-image: url(../RESOURCES/IMAGES/2.jpg);"></div>
+                    <div class="formations-item formations-item-2" style="background-image: url(../RESOURCES/IMAGES/3.jpg)"></div>
+                    <div class="formations-item formations-item-3" style="background-image: url(../RESOURCES/IMAGES/6.jpg)"></div>
                 </div>
             </div>
         </section>
@@ -293,7 +293,7 @@ include "FUNCTION/contact.func.php";
         <section class="travaux">
             <h1 data-aos="fade-up" data-aos-duration="1200"><?= $lang["travaux"] ?></h1>
             <div class="travaux-items">
-                <div>
+                <div style="background-image: url(./RESOURCES/IMAGES/4.jpg); background-size: cover;">
                     <div class="parag">
                         <h3><?= $lang["travaux-1"] ?></h3>
                         <p>
@@ -301,7 +301,7 @@ include "FUNCTION/contact.func.php";
                         </p>
                     </div>
                 </div>
-                <div>
+                <div style="background-image: url(./RESOURCES/IMAGES/6.jpg); background-size: cover;">
                     <div class="parag">
                         <h3><?= $lang["travaux-2-"] ?></h3>
                         <p>
@@ -309,7 +309,7 @@ include "FUNCTION/contact.func.php";
                         </p>
                     </div>
                 </div>
-                <div>
+                <div style="background-image: url(./RESOURCES/IMAGES/3.jpg); background-size: cover;">
                     <div class="parag">
                         <h3><?= $lang["travaux-3"] ?></h3>
                         <p>
@@ -327,12 +327,12 @@ include "FUNCTION/contact.func.php";
                 <div class="logo">
                     <img data-tilt data-tilt-max="50" data-tilt-speed="10000" data-tilt-perspective="500" data-tilt-scale="1.3" src="RESOURCES/IMAGES/logo.png" alt="">
                 </div>
-                <div class="laravel"></div>
-                <div class="javascript"></div>
-                <div class="nodejs"></div>
-                <div class="git-hub"></div>
-                <div class="html"></div>
-                <div class="autre"></div>
+                <div class="laravel"><img src="./RESOURCES/IMAGES/ASP.jpg" style="width: 100%;"></div>
+                <div class="javascript"><img src="./RESOURCES/IMAGES/c.png" style="width: 100%;"></div>
+                <div class="nodejs"><img src="./RESOURCES/IMAGES/Vue.js.png" style="width: 100%;"></div>
+                <div class="git-hub"><img src="./RESOURCES/IMAGES/Xamarin.webp" style="width: 100%;"></div>
+                <div class="html"><img src="./RESOURCES/IMAGES/laravel.png" style="width: 100%;"></div>
+                <div class="autre"><img src="./RESOURCES/IMAGES/React.jpg" style="width: 100%;"></div>
             </div>
         </section>
         <section class="contactez-nous" id="contactez-nous">

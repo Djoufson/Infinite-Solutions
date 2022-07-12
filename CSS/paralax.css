@@ -125,17 +125,22 @@
 
 .formations-item{
     width: 30%;
-    height: 300px;
+    height: 400px;
     margin: auto;
     background-size: cover;
 }
 
-.formations-item1{
-    background-image: url(../RESOURCES/IMAGES/2.jpg);
+p{
+    font-size: 19px;
 }
-.formations-item1{
-    background-image: url(../RESOURCES/IMAGES/3.jpg);
-}
-.formations-item1{
-    background-image: url(../RESOURCES/IMAGES/4.jpg);
+
+@media only screen and (max-width: 900px) {
+    .formations-items{
+        display: block;
+    }
+
+    .formations-item{
+        width: 90%;
+        margin: 50px 0;
+    }
 }
