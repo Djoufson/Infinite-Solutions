@@ -43,8 +43,7 @@ p, div{
     background-color: var(--main-color);
     width: 100%;
     height: 57px;
-    position: fixed;
-    z-index: 2;
+    position: relative;
 }
 
 .reseaux div{
@@ -59,11 +58,7 @@ p, div{
 }
 
 header>nav{
-    position: relative;
-    margin-bottom: 40px;
-    top: 50px;
     z-index: 1;
-    display: flex;
 }
 
 .logo, .nav-btn{
@@ -525,12 +520,6 @@ label span{
     }
 }
 
-#footer{
-    padding: 60px;
-    background: url(./RESOURCES/IMAGES/footer_container.png);
-    background-size: cover;
-}
-
 .footer-container{
     display: flex;
 }
@@ -570,9 +559,9 @@ label span{
     text-align: right;
 }
 
-.reseaux-sociaux svg path{
+/* .reseaux-sociaux svg path{
     fill: var(--main-color);
-}
+} */
 @media only screen and (max-width: 1119px) {
     .footer-container{
         display: block;
