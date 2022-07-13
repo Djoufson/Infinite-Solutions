@@ -7,7 +7,7 @@
         "realisation" => "Realisations",
         "lang_en" => "English",
         "lang_fr" => "Francais",
-        "contact" => "Nous Contacter",
+        "contact" => "CONTACTEZ-NOUS",
         
         "content-1" => "Automatisez vos activites",
         "content-1-p" => "Vous accompagnez dans votre processus de digitalisation et d’automatisation.",
@@ -28,14 +28,14 @@
         "services-2" => "Conception graphique",
         "services-2-p" => "À la recherche d’une meilleure identité visuelle ? Besoin d’améliorer votre communication visuelle ? Vous souhaitez avoir de meilleurs supports de communication ? Nous vous accompagnons dans le processus de production et de composition visuelle de tout type ; que ce soit à l’aide de la typographie, des couleurs, des formes, des couleurs ou des images nous vous proposons des designs.",
         "services-2-b" => "En Savoir Plus",
-        "services-3" => "Développement Desktop (Malcom)",
+        "services-3" => "Développement Desktop",
         "services-3-p" => "Les applications Desktop restent les plus utilisées dans le domaine de l’informatique. Elles offrent les meilleures performances. Nous mettons à votre disposition une équipe de professionnels pour vous accompagner dans le processus de digitalisation de votre métier.",
         "services-3-b" => "En Savoir Plus",
         
         "formations" => "Nos formations",
         "formations-p" => "Parceque l'atteinte de vos objectifs reste votre priorité, nous vous proposons des outils et solutions simples et efficaces pour vos problématiques régulières d'entreprises .",
         
-        "realise" => "Plus de 30 Applications realisees",
+        "realise" => "NOS STATISTIQUES",
         "realise-p" => "",
         "realise-1" => "Applications Web",
         "realise-2" => "Applications Mobiles",

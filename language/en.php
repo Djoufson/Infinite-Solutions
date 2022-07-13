@@ -7,7 +7,7 @@
         "realisation" => "Realisations",
         "lang_en" => "English",
         "lang_fr" => "Francais",
-        "contact" => "Contact us",
+        "contact" => "CONTACT US",
         
         "content-1" => "Automatisez vos activites",
         "content-1-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
@@ -29,7 +29,7 @@
         "services-2" => "Design Graphique",
         "services-2-p" => "Looking for a better visual identity? Need to improve your visual communication? Do you want to have better communication media? We support you in the production process and visual composition of all types; whether using typography, colors, shapes, colors or images we offer you designs.",
         "services-2-b" => "En Savoir Plus",
-        "services-3" => "Desktop Development (Malcom)",
+        "services-3" => "Desktop Development",
         "services-3-p" => "Desktop applications remain the most used in the field of computing. They offer the best performance. We put at your disposal a team of professionals to accompany you in the process of digitizing your business.",
         
         "services-3-b" => "En Savoir Plus",
@@ -37,7 +37,7 @@
         "formations" => "Nos formations",
         "formations-p" => "Desktop applications remain the most used in the field of computing. They offer the best performance. We put at your disposal a team of professionals to accompany you in the process of digitizing your business.",
         
-        "realise" => "Plus de 30 Applications realisees",
+        "realise" => "NOS STATISTIQUES",
         "realise-p" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis in voluptatem blanditiis molestias minima officiis delectus voluptas fugit eum accusamus necessitatibus, dolor enim expedita corrupti ut rem ullam ducimus sit.",
         "realise-1" => "Applications Web",
         "realise-2" => "Applications Mobiles",
@@ -62,7 +62,7 @@
         "technologies-p" => " Nous utlisons les technologies et les outils modernes de reference pour la bonne gestion et la conception de vos projet",
         "contacter-nous" => "Contactez nous",
         "contacter-nous-p" => "Nous serions ravis de discuter de la manière dont nous pouvons vous aider.",
-        "contacter-nous-name" => "Namme",
+        "contacter-nous-name" => "Name",
         "contacter-nous-firstname" => "Surname",
         "contacter-nous-email" => "E-mail",
         "contacter-nous-phone" => "Phone",

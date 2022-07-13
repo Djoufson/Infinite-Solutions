@@ -1,0 +1,212 @@
+@keyframes boule1 {
+    0%   {         
+        bottom: 10%;
+        left: 60%;
+    }
+    5%   {       
+        bottom: 30%;
+        left: 65%;
+    }
+    15%   {       
+        bottom: 45%;
+        left: 70%;
+    }
+    25%   {      
+        bottom: 60%;
+        left: 85%;
+    }
+    35%   {         
+        bottom: 65%;
+        left: 75%;
+    }
+    45%   {       
+        bottom: 55%;
+        left: 60%;
+    }
+    55%   {       
+        bottom: 45%;
+        left: 55%;
+    }
+    65%   {      
+        bottom: 40%;
+        left: 48%;
+    }
+    85%   {       
+        bottom: 30%;
+        left: 40%;
+    }
+    95%   {       
+        bottom: 20%;
+        left: 50%;
+    }
+    100%   {      
+        bottom: 10%;
+        left: 60%;
+    }
+}
+@keyframes boule2 {
+    0%   {         
+        bottom: 10%;
+        left: 60%;
+    }
+    10%   {       
+        bottom: 24%;
+        left: 70%;
+    }
+    25%   {       
+        bottom: 35%;
+        left: 80%;
+    }
+    30%   {      
+        bottom: 20%;
+        left: 90%;
+    }
+    40%   {         
+        bottom: 38%;
+        left: 85%;
+    }
+    50%   {       
+        bottom: 46%;
+        left: 80%;
+    }
+    60%   {       
+        bottom: 59%;
+        left: 70%;
+    }
+    70%   {      
+        bottom: 70%;
+        left: 76%;
+    }
+    80%   {       
+        bottom: 50%;
+        left: 86%;
+    }
+    90%   {       
+        bottom: 40%;
+        left: 75%;
+    }
+    100%   {      
+        bottom: 10%;
+        left: 60%;
+    }
+}
+@keyframes techno {
+    0% {transform: translate(0, 10px);}
+    50% {transform: translate(0, -10px);}
+    100% {transform: translate(0, 10px);}
+}
+@keyframes logo {
+    0% {transform: translate(0, -5px);}
+    50% {transform: translate(0, 5px);}
+    100% {transform: translate(0, -5px);}
+}
+.qui{
+    height: 100vh;
+    background-image: url(../RESOURCES/IMAGES/illustration_qui.png), linear-gradient(181.22deg, #FFFFFF 2.69%, #BCC1D3 94.89%);
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+#qui .ellipse1, #qui .ellipse2{
+    position: absolute;
+    height: 230px;
+    width: 230px;
+    z-index: 0;
+}
+
+#qui .ellipse1{
+    bottom: -50px;
+    left: 40%;
+    width: 300px;
+    height: 300px;
+
+    animation: boule1 12s ease-in-out infinite;
+}
+
+#qui .ellipse2{
+    bottom: 0;
+    width: 400px;
+    height: 400px;
+    right: -10px;
+    
+    animation: boule2 12s ease-in-out infinite;
+}
+
+.arbre>div{
+    animation: techno 2s ease-in-out infinite;
+}
+
+.arbre .logo{
+    animation: logo 2s ease-in-out infinite;
+}
+
+.formations-items{
+    display: flex;
+}
+
+.formations-item, .travaux-items>div{
+    width: 30%;
+    height: calc(100vw * 30 / 100);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+}
+
+.formations-item h4, .travaux-items h4{
+    position: absolute;
+    color: white;
+    top: 10px;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0 15px 15px 0 ;
+}
+.formations-item p{
+    text-align: left;
+    top: 100%;
+    padding: 10px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 15px 15px 0 0 ;
+}
+
+.formations-item:hover .h4, .travaux-items>div:hover h4{
+    transform: translate(0%);
+    transition: all ease-in-out 0.6s;
+}
+.formations-item:not(:hover) .h4, .travaux-items>div:not(:hover) h4{
+    transform: translate(-100%);
+    transition: all ease-in-out 0.6s;
+}
+
+.formations-item:hover p,.travaux-items>div:hover div{
+    transform: translateY(-100%);
+    transition: all ease-in-out 0.6s;
+}
+.formations-item:not(:hover) .p,.travaux-items>div:not(:hover) div{
+    transform: translateY(100%);
+    transition: all ease-in-out 0.6s;
+}
+
+
+.travaux-items>div:hover button{
+    transform: translateY(70px);
+    transition: 0.4s all ease-out;
+}
+p{
+    font-size: 19px;
+}
+
+@media only screen and (max-width: 900px) {
+    .formations-items{
+        display: block;
+    }
+
+    .formations-item{
+        width: 90%;
+        margin: 50px 0;
+    }
+}

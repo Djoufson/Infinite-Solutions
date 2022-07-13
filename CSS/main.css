@@ -199,19 +199,15 @@ section{
     width: 50%;
 }
 
-.service-section>img{
-    width: 48%;
-    border-radius: 15px;
-}
 
-.service-section button, .submit button, .button{
+.service-section button, .submit button, .button, .contact-btn{
     padding: 13px 40px;
     border: none;
     background-color: #68BB8E;
     color: white;
 }
 
-.service-section button:hover, .submit button:hover, .button:hover{
+.service-section button:hover, .submit button:hover, .button:hover, .contact-btn:hover{
     background-color: #5ba37b;
     transition: 0.2s all ease-in-out;
 }
@@ -222,18 +218,11 @@ section{
 
 @media only screen and (max-width: 1000px) {
     #services .service-section{
-        display: block;
-        height: 80vw;
+        height: 819px;
         position: relative;
     }
 
-    .service-section img{
-        position: absolute;
-        width: 100%;
-        top: 0;
-    }
-
-    .service-section>div{
+    .service-section .contenu{
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -292,7 +281,7 @@ section{
 .realisations-items{
     width: 80%;
     left: 50%;
-    top: 60%;
+    top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     position: absolute;
@@ -322,8 +311,9 @@ section{
     transition: 0.5s all ease-in-out;
 }
 
-@media only screen and (max-width: 1131px) {
+@media only screen and (max-width: 800px) {
     .realisations-items{
+        height: calc(100vw * 55 / 100);
         display: inline-block;
         position: absolute;
         top: 45%;
@@ -369,13 +359,6 @@ section{
 }
 .travaux-items>div>button, .parag{
     position: absolute;
-}
-.travaux-items>div>button{
-    width: 164px;
-    border: none;
-    background: #1A8C4F;
-    border-radius: 30px;
-    bottom: 100%;
 }
 .parag{
     top: 100%;
@@ -426,9 +409,10 @@ section{
 
 .arbre>div{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
+    background-size: 100% 100%;
     box-shadow: 0px 6px 7px 1px rgba(0, 0, 0, 0.11);
 }
 
@@ -437,39 +421,47 @@ section{
     height: 40%;
     border-radius: 0;
     box-shadow: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: calc(50% - 10%);
+    left: calc(50% - 10%);
 }
 
 .laravel{
-    left: 50%;
-    transform: translateX(-50%);
+    background-image: url(../RESOURCES/IMAGES/ASP.jpg);
+    left: calc(50% - 45px);
+    transform: translate(-50%);
 }
 .nodejs{
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
+    left: calc(50% - 45px);
+    top: calc(50% + 10vh);
+    background-image: url(../RESOURCES/IMAGES/Vue.js.png);
 }
 .javascript{
-    top: 20%;
-    left: 15%;
+    top: 25%;
+    left: 25%;
+    background-image: url(../RESOURCES/IMAGES/c.png);
 }
 
 .git-hub{
-    right: 15%;
-    top: 20%;
+    right: 25%;
+    top: 25%;
+    background-image: url(../RESOURCES/IMAGES/Xamarin.webp);
 }
 
 .html{
-    right: 15%;
-    bottom: 20%;
+    right: 25%;
+    top: 50%;
 }
 
 .autre{
-    bottom: 20%;
+    top: 50%;
+    left: 25%;
+} 
+/*
+
+.autre{
+    bottom: 25%;
     left: 15%;
-}
+} */
 
 /* Contactez Nous */
 .contactez-nous{
@@ -514,8 +506,7 @@ label span{
 }
 
 .submit{
-    text-align: center;
-    padding: 15px;
+    padding: 15px 0;
 }
 
 @media only screen and(max-width: 800px) {
