@@ -145,12 +145,12 @@ header>nav{
 }
 
 /* MAIN */
-section{
+section .contain{
     padding: 110px;
 }
 
 @media only screen and(max-width: 500px) {
-    section{
+    section .contain{
         padding: 5px 0;
     }
 }
@@ -174,6 +174,7 @@ section{
 /* Qui sommes nous */
 
 .qui{
+    padding-top: 120px;
     position: relative;
     max-height: 900px;
 }
@@ -224,7 +225,7 @@ section{
 }
 
 @media only screen and (max-width: 1000px) {
-    #services .service-section .contain{
+    #services .service-section{
         height: 819px;
         position: relative;
     }
@@ -258,8 +259,12 @@ section{
     text-align: center;
     color: white;
     width: 100%;
-    max-height: 900px;
+}
 
+@media screen and(min-width: 1510px) {
+    .formations .contain{
+        max-height: 900px;
+    }
 }
 
 .formations{
@@ -285,22 +290,21 @@ section{
 
 /* Realisations */
 .realisations .contain{
-    height: 100vh;
-    max-height: 900px;
+    height: 900px;
     position: relative;
 }
 .realisations{
     text-align: center;
     padding: 50px;
     position: relative;
-    height: 100vh;
-    max-height: 900px;
+    height: 900px;
     background-color: #E9EBF1;
 }
+
 .contain .realisations-items{
     width: 80%;
     left: 50%;
-    top: 50%;
+    top: 65%;
     transform: translate(-50%, -50%);
     display: flex;
     position: absolute;
@@ -309,67 +313,60 @@ section{
     font-size: 40px;
 }
 
+.realisations img{
+    width: 90px;
+    height: 90px;
+}
 .realisations-items>div{
     text-align: center;
     width: 25%;
 }
+
 .realisations>p{
     width: 60%;
     margin: auto;
 }
-.img{
-    width: 42%;
-    height: 42%;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 20px;
-}
 
-.img:hover{
-    transform: translateY(-10px);
-    transition: 0.5s all ease-in-out;
+@media screen and(min-width: 1510px) {
+    .realisations .contain, .realisations{
+        max-height: 900px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
-    .realisations-items{
-        height: calc(100vw * 55 / 100);
-        display: inline-block;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: auto;
-    }
-    .realisations{
-        text-align: center;
-        padding: 50px;
-        position: relative;
-        height: 200vh;
-        background-color: #E9EBF1;
+        
+    .contain .realisations-items{
+        display: block;
+        top: 50%;
     }
 
-    .img{
-        width: 20%;
+    .realisations img{
+        width: 60px;
+        height: 60px;
     }
-    .realisations-items div{
-        width: auto;
+
+    .contain .realisations-items>div{
         text-align: center;
-        margin-bottom: 10px;
-    }
-        
-    .realisations>p{
-        width: 100%;
         margin: auto;
     }
-    .formations-text{
-        width: 100%;
-        margin: auto;
+    #realisations .contain{
+        height: 160vh;
+        position: relative;
+    }
+    #realisations{
+        position: relative;
+        height: 160vh;
     }
 }
 /* Travaux */
 .travaux{
-    height: 100vh;
-    max-height: 900px;
+    height: auto;
+}
+
+@media screen and(min-width: 1510px) {
+    .travaux .contain, .travaux{
+        max-height: 900px;
+    }
 }
 
 .travaux-items>div .contain{

@@ -132,11 +132,11 @@ h3{
         display: none;
     }
 
-    .qui{
+    .qui .contain{
         padding-top: 80px;
     }
 
-    .qui h1{
+    .qui .contain h1{
         margin-top: 20px;
     }
     
@@ -153,12 +153,12 @@ h3{
     #services .service-section{
         height: 743px;
     }
-    h1{
+    .contain h1{
         font-size: 35px;
     }
     
-    section, #footer, #header nav.navbar{
-        padding: 40px;
+    section .contain, #footer .contain, #header nav.navbar{
+        padding: 15px;
     }
     
     #header nav.navbar{
@@ -187,7 +187,9 @@ h3{
 
 @media only screen and (max-width: 550px) {
 
-    
+    .qui .contain{
+        padding-top: 220px;
+    }
 
     nav .logo-title{
         display: none;
@@ -240,7 +242,14 @@ h3{
 }
 
 @media only screen and (max-width: 400px) {
-    
+    section{
+        padding: 0;
+    }
+
+    .html{
+        padding: 0;
+        overflow-y: 0;
+    }
 }
 
 @media only screen and (max-width: 350px) {

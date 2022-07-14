@@ -78,8 +78,12 @@ include "FUNCTION/contact.func.php";
 
     <title><?= $lang["title"] ?></title>
 </head>
-<body>
-    <a class="pin" href="#header"><img src="RESOURCES/IMAGES/carret_left.png" alt=""></a>
+<body style="overflow-right: hidden">
+    <!--
+    <div style="width: 100%; height: 100vh; max-width: 1510px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0; position: fixed">
+        <a class="pin" href="#header"><img src="RESOURCES/IMAGES/carret_left.png" alt=""></a>
+    </div>
+    -->
     <header id="header">
         <div class="header-contain">
             <nav class="navbar navbar-expand-lg">
@@ -185,10 +189,9 @@ include "FUNCTION/contact.func.php";
                 <svg class="ellipse2" width="401" height="401" viewBox="0 0 401 401" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="200.5" cy="200.5" r="200.5" fill="#1C2651" fill-opacity="0.35"/>
                 </svg>
-                <h1 data-aos="fade-up"  data-aos-duration="1000"><?= $lang["qui"] ?></h1>
                 <div>
+                    <h1 data-aos="fade-up"  data-aos-duration="1000"><?= $lang["qui"] ?></h1>
                     <p data-aos="fade-up"  data-aos-duration="1500"><?= $lang["qui-1-p"] ?></p>
-                    
                 </div>
             </div>
         </section>
