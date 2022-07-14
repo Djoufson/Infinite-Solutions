@@ -43,11 +43,19 @@ h3{
 .formations h1{
     -webkit-text-fill-color: #97D1B2;
 }
+
 section, #footer{
     padding: 115px;
     max-width: 1510px;
     min-width: 350px;
     margin: auto;
+}
+#header nav.navbar{
+    max-width: 1510px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    min-width: 350px;
 }
 
 .navbar-nav{
@@ -125,21 +133,20 @@ section, #footer{
 }
 
 @media only screen and (max-width: 800px) {
-    
     #services .service-section{
-        height: 700px;
+        height: 743px;
     }
     h1{
         font-size: 35px;
     }
     
-    section, #footer{
+    section, #footer, #header nav.navbar{
         padding: 40px;
     }
     
-    #header>.navbar{
-        padding-left: 30px;
-        padding-right: 45px;
+    #header nav.navbar{
+        padding-left: 40px;
+        padding-right: 40px;
     }
     
     #formations .formations-item, #travaux .travaux-items>div{
@@ -163,6 +170,12 @@ section, #footer{
 
 @media only screen and (max-width: 550px) {
 
+    
+
+    nav .logo-title{
+        display: none;
+    }
+
     p{
         font-size: 18px;
     }
@@ -178,6 +191,22 @@ section, #footer{
     #footer li, #footer a, #footer p{
         font-size: 13px;
     }
+
+    #footer{
+        padding-top: 34px;
+    }
+    
+    #formations h4{
+        font-size: 15px;
+    }
+    
+    .formations-item .h4, .travaux-items>div h4{
+        font-size: 15px;
+    }
+    .formations-item p,.travaux-items>div div p{
+        line-height: 13px;
+        font-size: 13px;
+    }
 }
 
 @media only screen and(max-width: 1270px) {
@@ -186,7 +215,11 @@ section, #footer{
     }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 1190px) {
+    .service-section button, .button, .contact-btn{
+        padding: 5px 17px;
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
