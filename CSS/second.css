@@ -112,6 +112,9 @@ h3{
 
 @media only screen and (max-width: 1131px) {
 
+    .slider{
+        height: auto;
+    }
     .navbar-nav{
         text-align: center;
         gap: 20px;
@@ -127,13 +130,12 @@ h3{
     .nav-btn{
         display: none;
     }
-
-    .slider{
-        display: none;
-    }
-
     .qui .contain{
         padding-top: 80px;
+    }
+
+    .slider{
+        padding-top: 60px;
     }
 
     .qui .contain h1{
@@ -150,6 +152,15 @@ h3{
 }
 
 @media only screen and (max-width: 800px) {
+    
+    .slider h1{
+        font-size: 13px;
+    }
+    .slider p{
+        font-size: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
     #services .service-section{
         height: 743px;
     }
@@ -187,6 +198,14 @@ h3{
 
 @media only screen and (max-width: 550px) {
 
+    .slider h1{
+        font-size: 13px;
+    }
+    .slider p{
+        font-size: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
     .qui .contain{
         padding-top: 220px;
     }
@@ -198,9 +217,9 @@ h3{
     p{
         font-size: 18px;
     }
-    .slider{
+    /* .slider{
         display: none;
-    }
+    } */
     
     #header>.navbar{
         padding-left: 30px;

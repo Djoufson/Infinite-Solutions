@@ -483,6 +483,8 @@ section .contain{
 
 /* Contactez Nous */
 .contactez-nous{
+    padding-top: 30px;
+    padding-bottom: 30px;
     background: linear-gradient(132.26deg, #E8F5EE 12.09%, #BCC1D3 92.19%);
 }
 .contactez-nous .container{
@@ -581,7 +583,7 @@ label span{
 /* .reseaux-sociaux svg path{
     fill: var(--main-color);
 } */
-@media only screen and (max-width: 1119px) {
+@media only screen and (max-width: 900px) {
     .footer-container{
         display: block;
     }
