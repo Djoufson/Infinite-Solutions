@@ -159,6 +159,7 @@ section{
 .slider{
     padding-top: 0;
     height: 100vh;
+    max-height: 900px;
 }
 
 .content{
@@ -169,11 +170,17 @@ section{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 /* Qui sommes nous */
 
-.qui div{
+.qui{
+    position: relative;
+    max-height: 900px;
+}
+
+.qui .contain>div{
     width: 50%;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -217,7 +224,7 @@ section{
 }
 
 @media only screen and (max-width: 1000px) {
-    #services .service-section{
+    #services .service-section .contain{
         height: 819px;
         position: relative;
     }
@@ -233,23 +240,29 @@ section{
     }
 }
 @media only screen and (max-width: 550px) {
-    #services .service-section{
+    #services .service-section .contain{
         display: block;
         height: 97vw;
         position: relative;
     }
 }
 @media only screen and (max-width: 460px) {
-    #services .service-section{
+    #services .service-section .contain{
         display: block;
         height: 117vw;
         position: relative;
     }
 }
 /* Formations */
-.formations{
+.formations .contain{
     text-align: center;
     color: white;
+    width: 100%;
+    max-height: 900px;
+
+}
+
+.formations{
     height: 100vh;
     background-color: var(--main-color);
     background-image: url(../RESOURCES/SVG/patter_desktop_left.svg), url(../RESOURCES/SVG/pattern_desktop.svg);
@@ -271,14 +284,20 @@ section{
 
 
 /* Realisations */
+.realisations .contain{
+    height: 100vh;
+    max-height: 900px;
+    position: relative;
+}
 .realisations{
     text-align: center;
     padding: 50px;
     position: relative;
     height: 100vh;
+    max-height: 900px;
     background-color: #E9EBF1;
 }
-.realisations-items{
+.contain .realisations-items{
     width: 80%;
     left: 50%;
     top: 50%;
@@ -350,9 +369,10 @@ section{
 /* Travaux */
 .travaux{
     height: 100vh;
+    max-height: 900px;
 }
 
-.travaux-items>div{
+.travaux-items>div .contain{
     background-color: #eee;
     border-radius: 5px;
     position: relative;
@@ -404,6 +424,7 @@ section{
 .arbre{
     position: relative;
     height: 80vh;
+    max-height: 900px;
     padding: 50px;
 }
 

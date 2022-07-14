@@ -2,6 +2,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
 h1{
     margin-bottom: 60px;
     font-size: 64px;
@@ -32,6 +33,7 @@ h3{
 .service-section .image{
     width: 35vw;    
     height: 35vw;
+    max-height: 528px;
     margin: auto;
     border-radius: 15px;
     background-color: #000;
@@ -43,18 +45,33 @@ h3{
 .formations h1{
     -webkit-text-fill-color: #97D1B2;
 }
-
-section, #footer{
+#header{
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+    z-index: 2;
+    position: fixed;
+}
+#header .header-container{
+    position: fixed;
+}
+.contain , #footer .contain{
     padding: 115px;
     max-width: 1510px;
     min-width: 350px;
     margin: auto;
 }
+
+#heaer .header-contain{
+    height: auto;
+    padding-top: 0;
+}
+
 #header nav.navbar{
+    z-index: 2;
     max-width: 1510px;
     left: 50%;
     transform: translate(-50%);
-    background-color: #fff;
     min-width: 350px;
 }
 
@@ -230,12 +247,20 @@ section, #footer{
     
 }
 
+@media only screen and(min-width: 1510px){
+    .slider{
+        max-height: 900px;
+    }
+    
+    .formations{
+        max-height: 900px;
+    }
+}
 
 /* Suplement */
 
 #header nav{
     position: fixed;
-    background-color: #fff;
     width: 100%;
     padding-left: 130px;
 }
