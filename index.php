@@ -3,6 +3,7 @@
 session_start();
 
 $msg = "";
+$display = "none";
 if(!isset($_SESSION['lang'])){
     $_SESSION['lang'] = "fr";
 }else if(isset($_GET['lang']) && $_SESSION['lang'] != $_GET['lang'] && !empty($_GET['lang'])){
@@ -16,6 +17,7 @@ require_once "language/".$_SESSION["lang"].".php";
 
 include "FUNCTION/contact.func.php";
     if(isset($_POST["submit"])):
+        $display    = "visible";
         $name       = htmlspecialchars(trim($_POST['name']));
         $firstName  = htmlspecialchars(trim($_POST['firstName']));
         $email      = htmlspecialchars(trim($_POST['email']));
@@ -40,7 +42,7 @@ include "FUNCTION/contact.func.php";
 
         if(!empty($errors)){
             foreach($errors as $error){
-                $msg = $error;
+                $msg = $msg.$error.'<br>';
             }
         }else{
             if(send_mail($name, $email, $message)){
@@ -49,8 +51,16 @@ include "FUNCTION/contact.func.php";
                 $msg = 'Votre message a été envoyer avec succès';
             }else{
                 $msg = 'Nous n\'avons pas pu envoyer votre message';
+                ?>
+                <style>
+                    .form .alert{
+                        background-color: green;
+                    }
+                </style>
+                <?php
             }
         }
+        echo "<script>document.getElementById('name').focus();</script>";
     endif;
 ?>
 <!DOCTYPE html>
@@ -84,6 +94,30 @@ include "FUNCTION/contact.func.php";
         <a class="pin" href="#header"><img src="RESOURCES/IMAGES/carret_left.png" alt=""></a>
     </div>
     -->
+
+    <style>
+        .slider h1{
+            font-weight: 650;
+            text-transform: capitalize;
+            font-size: 35px;
+        }
+            
+        .titre-2{
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        h1{
+            margin-bottom: 60px;
+            font-size: 45px;
+            font-weight: 900;
+            background-image: linear-gradient(-45deg, #1F9959, #273672);
+            text-transform: uppercase;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
     <header id="header">
         <div class="header-contain">
             <nav class="navbar navbar-expand-lg">
@@ -125,13 +159,13 @@ include "FUNCTION/contact.func.php";
                     <li class="nav-item">
                             <a href="#formations" class="nav-link"><?= $lang["formation"] ?></a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                             <a href="#realisations" class="nav-link"><?= $lang["realisation"] ?></a>
-                    </li>
+                    </li> -->
                     </ul>
                 </div>
-                <div class="nav-btn text-right">
-                    <a href="#contactez-nous" style="border-radius: 0" class="contact-btn text-right"><?= $lang["contact"] ?></a>
+                <div class="nav-btn" style="position: relative">
+                    <a href="#contactez-nous" style="border-radius: 0; position: absolute; right: 2px; top: 50%; transform: translate(0,-50%);" class="contact-btn text-right"><?= $lang["contact"] ?></a>
                 </div> 
             </nav>
         </div>
@@ -203,11 +237,11 @@ include "FUNCTION/contact.func.php";
                         <h3 data-aos="fade-up" data-aos-duration="1200"><?= $lang["services-1"] ?></h3>
                         <p data-aos="fade-up" data-aos-duration="1600"><?= $lang["services-1-p"] ?></p>
                     </div>
-                    <div class="image" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="image" style="background-image: url(./RESOURCES/IMAGES/webDev.jpg);" data-aos="fade-left" data-aos-duration="1200">
                     </div>
                 </div>
                 <div class="service-section">
-                    <div class="image" data-aos="fade-right" data-aos-duration="1400" >
+                    <div class="image" style="background-image: url(./RESOURCES/IMAGES/graphicDesign.jpg);" data-aos="fade-right" data-aos-duration="1400" >
                     </div>
                     <div class="contenu">
                         <h3 data-aos="fade-up" data-aos-duration="1000"><?= $lang["services-2"] ?></h3>
@@ -219,7 +253,7 @@ include "FUNCTION/contact.func.php";
                         <h3 data-aos="fade-up" data-aos-duration="1000"><?= $lang["services-3"] ?></h3>
                         <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["services-3-p"] ?></p>
                     </div>
-                    <div class="image" data-aos="fade-left" data-aos-duration="1400">
+                    <div class="image" style="background-image: url(./RESOURCES/IMAGES/DesktopDev.jpg);" data-aos="fade-left" data-aos-duration="1400">
                     </div>
             </div>
             </div>
@@ -233,25 +267,25 @@ include "FUNCTION/contact.func.php";
                     <p data-aos="fade-up" data-aos-duration="1200"><?= $lang["formations-p"] ?></p>
                     </div>
                     <div class="formations-items">
-                        <div data-aos="fade-up" data-aos-duration="1200" class="formations-item formations-item-1" style="background-image: url(../RESOURCES/IMAGES/2.jpg);">
-                            <h4 class="h4">Formation C#</h4>
-                            <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi incidunt similique libero enim labore facere</p>
+                        <div data-aos="fade-up" data-aos-duration="1200" class="formations-item formations-item-1" style="background-image: url(./RESOURCES/IMAGES/2.jpg);">
+                            <h4 class="h4"><?= $lang["formation-1"]?></h4>
+                            <p class="p"><?= $lang["formation-p-1"]?></p>
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="1200" class="formations-item formations-item-2" style="background-image: url(../RESOURCES/IMAGES/3.jpg)">
-                            <h4 class="h4">Formation C#</h4>
-                            <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi incidunt similique libero enim labore facere</p>
+                        <div data-aos="fade-up" data-aos-duration="1200" class="formations-item formations-item-2" style="background-image: url(./RESOURCES/IMAGES/3.jpg)">
+                            <h4 class="h4"><?= $lang["formation-2"]?></h4>
+                            <p class="p"><?= $lang["formation-p-2"]?></p>
                             </div>
-                        <div data-aos="fade-up" data-aos-duration="1200" class="formations-item formations-item-3" style="background-image: url(../RESOURCES/IMAGES/6.jpg)">
-                            <h4 class="h4">Formation C#</h4>
-                            <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi</p>
+                        <div data-aos="fade-up" data-aos-duration="1200" class="formations-item formations-item-3" style="background-image: url(./RESOURCES/IMAGES/6.jpg)">
+                            <h4 class="h4"><?= $lang["formation-3"]?></h4>
+                            <p class="p"><?= $lang["formation-p-3"]?></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="realisations" id="realisations">
+        <!-- <section class="realisations" id="realisations">
             <div class="contain">
-                <h1 data-aos="fade-up"data-aos-duration="1000" ><?= $lang["realise"] ?></h1>
+                <h1 data-aos="fade-up"data-aos-duration="1000" class="titre-2" ><?= $lang["realise"] ?></h1>
                 <h4>Plus de 30 Applications realisees</h4>
                 <div class="realisations-items">
                     <div  >
@@ -276,13 +310,13 @@ include "FUNCTION/contact.func.php";
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="travaux" id="travaux">
             <div class="contain">
-                <h1 data-aos="fade-up" data-aos-duration="1200"><?= $lang["travaux"] ?></h1>
+                <h1 data-aos="fade-up" data-aos-duration="1200" class="titre-2" ><?= $lang["travaux"] ?></h1>
                 <div class="travaux-items">
                     <div data-aos="fade-up" data-aos-duration="1200" style="background-image: url(./RESOURCES/IMAGES/4.jpg); background-size: cover;">
-                        <h4>Bloo Mobile</h4>
+                        <a href="https://www.blooapp.live"><h4>Bloo Survey</h4></a>
                         <div class="parag">
                             <p>
                             <?= $lang["travaux-1-p"] ?>
@@ -290,7 +324,7 @@ include "FUNCTION/contact.func.php";
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1200" style="background-image: url(./RESOURCES/IMAGES/6.jpg); background-size: cover;">
-                        <h4>Bloo Mobile</h4>
+                        <a href="http://www.ip-coatings.com"><h4>IP-Coatings</h4></a>
                         <div class="parag">
                             <p>
                             <?= $lang["travaux-2-p"] ?>
@@ -298,7 +332,7 @@ include "FUNCTION/contact.func.php";
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1200" style="background-image: url(./RESOURCES/IMAGES/3.jpg); background-size: cover;">
-                        <h4>Bloo Mobile</h4>
+                        <a href="http://www.ensetdouala.net"><h4>ENSET Douala</h4></a>
                         <div class="parag">
                             <p>
                             <?= $lang["travaux-3-p"] ?>
@@ -310,7 +344,7 @@ include "FUNCTION/contact.func.php";
         </section>
         <section class="technologies">
             <div class="contain">
-                <h1 data-aos="fade-up" data-aos-duration="1200"><?= $lang["technologies"] ?></h1>
+                <h1 data-aos="fade-up" data-aos-duration="1200" class="titre-2" ><?= $lang["technologies"] ?></h1>
                 <p data-aos="fade-up" data-aos-duration="1600"><?= $lang["technologies-p"] ?></p>
                 <div class="arbre">
                     <div class="logo">
@@ -320,7 +354,7 @@ include "FUNCTION/contact.func.php";
                     <div class="javascript"></div>
                     <div class="nodejs"></div>
                     <div class="git-hub"></div>
-                    <div class="html"><img src="./RESOURCES/IMAGES/laravel.png" style="width: 100%;"></div>
+                    <div class="html"></div>
                     <div class="autre"><img src="./RESOURCES/IMAGES/React.jpg" style="width: 100%;"></div>
                 </div>
             </div>
@@ -328,28 +362,28 @@ include "FUNCTION/contact.func.php";
         <section class="contactez-nous" id="contactez-nous">
             <div class="container">
                 <div class="text">
-                    <h1 data-aos="fade-up" data-aos-duration="1000"><?= $lang["contacter-nous"] ?></h1>
+                    <h1 data-aos="fade-up" data-aos-duration="1000" class="titre-2" ><?= $lang["contacter-nous"] ?></h1>
                     <p data-aos="fade-up" data-aos-duration="1600"><?= $lang["contacter-nous-p"] ?></p>
                 </div>
                 <div class="form">
-                    <div class="alert" style="display: none">
+                    <div class="alert" style="display: <?php echo($display) ?>">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <?php echo($msg); ?>
                     </div>
                     <form action="" method="post" name="maillingForm">
                         <label for="name"><?= $lang["contacter-nous-name"] ?><span>*</span></label>
                         <div class="input">
-                            <input class="form-control" required type="text" id="name" name="name">
+                            <input class="form-control" type="text" id="name" name="name">
                         </div>
 
                         <label for="firstName"><?= $lang["contacter-nous-firstname"] ?><span>*</span></label>
                         <div class="input">
-                            <input class="form-control" required type="text" name="firstName"id="firstName" >
+                            <input class="form-control" type="text" name="firstName"id="firstName" >
                         </div>
 
                         <label for="email"><?= $lang["contacter-nous-email"] ?><span>*</span></label>
                         <div class="input">
-                            <input class="form-control" required type="email" name="email" id="email" >
+                            <input class="form-control" type="email" name="email" id="email" >
                         </div>
 
                         <label for="phone"><?= $lang["contacter-nous-phone"] ?></label>
@@ -359,11 +393,11 @@ include "FUNCTION/contact.func.php";
 
                         <label for="message"><?= $lang["contacter-nous-message"] ?><span>*</span></label>
                         <div class="input">
-                            <textarea class="form-control" required name="message" id="message" cols="60" rows="10" ></textarea>
+                            <textarea class="form-control" name="message" id="message" cols="60" rows="10" ></textarea>
                         </div>
                         
                         <div class="submit">
-                            <button type="submit" onsubmit="return validateForm()" data-toggle="modal" data-target="#exampleModal" name="submit"><?= $lang["contacter-nous-send"] ?></button>
+                            <button type="submit" data-toggle="modal" data-target="#exampleModal" name="submit"><?= $lang["contacter-nous-send"] ?></button>
                         </div>
                     </form>
                 </div>
@@ -389,16 +423,9 @@ include "FUNCTION/contact.func.php";
                         <li>
                             <a href="#formations" class="nav-link"><?= $lang["formation"] ?></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#realisations" class="nav-link"><?= $lang["realisation"] ?></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="liens-utiles">
-                    <h2><?= $lang["footer-liens"] ?></h2>
-                    <ul>
-                        <li><?= $lang["footer-liens-1"] ?></li>
-                        <li><?= $lang["footer-liens-2"] ?></li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="contacts">
@@ -408,43 +435,31 @@ include "FUNCTION/contact.func.php";
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.2078 22.8816L23.6068 19.7796C23.5266 19.5608 23.7009 19.6007 23.8199 19.0143C23.9389 18.7279 24.0001 18.4208 24 18.1107C24 17.4786 23.7524 16.8845 23.6068 16.4388L19.9689 13.101C19.7501 12.8812 19.49 12.7068 19.2036 12.5879C18.9172 12.4689 18.6101 12.4077 18.3 12.4078C17.668 12.4078 17.0738 12.6553 16.6282 13.101L14.1874 15.5417C12.9281 14.9704 11.7825 14.1761 10.8058 13.1971C9.82445 12.2205 9.02723 11.075 8.45243 9.81553L10.8932 7.37476C11.113 7.15594 11.2874 6.89586 11.4063 6.60946C11.5253 6.32605 11.5865 6.01596 11.5864 5.70583C11.5864 5.07379 11.3388 4.47961 10.8932 4.03398L7.55825 0.693205C7.33903 0.473159 7.07847 0.298631 6.79155 0.179664C6.50463 0.060697 6.19701 -0.000361707 5.88641 8.1319e-07C5.25437 7.85563e-07 4.66019 0.247574 4.21456 0.693205L1.11845 3.78932C0.404854 4.5 -2.39606e-07 5.48155 -2.83657e-07 6.48932C-2.92951e-07 6.70194 0.0174755 6.90583 0.052427 7.1068C0.699029 11.033 2.78738 14.9272 5.92718 18.0699C9.06408 21.2097 12.9553 23.2951 16.8932 23.9505C18.0961 24.1485 19.334 23.7495 20.2078 22.8816Z" fill="#414E83"/>
                         </svg>
-                        (+237) 699 22 44 55
+                        (+237) 677 67 19 15
                         </li>
                         <li>
                         <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M29.4545 0H1.09091C0.4875 0 0 0.4875 0 1.09091V22.9091C0 23.5125 0.4875 24 1.09091 24H29.4545C60.058 24 60.5455 23.5125 60.5455 22.9091V1.09091C60.5455 0.4875 60.058 0 29.4545 0ZM26.7 3.7125L15.9443 12.0818C15.6784 12.2898 15.6068 12.2898 15.0409 12.0818L4.28182 3.7125C4.24126 3.6812 4.21151 3.63799 4.19674 3.58894C4.18198 3.53988 4.18293 3.48743 4.19947 3.43894C4.21601 3.39045 4.2473 3.34836 4.28897 3.31855C4.36064 3.28874 4.38059 3.27272 4.43182 3.27273H26.55C26.6012 3.27272 26.6512 3.28874 26.6929 3.31855C26.7345 3.34836 26.7658 3.39045 26.7824 3.43894C26.7989 3.48743 26.7998 3.53988 26.7851 3.58894C26.7703 3.63799 26.7406 3.6812 26.7 3.7125Z" fill="#414E83"/>
                         </svg>
-                        <a href="mailto: contact@infinitesolutions.com">hello@infinite-solutions.com</a>
+                        <a href="mailto: hello@isolutions-intl.com"> hello@isolutions-intl.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div style="display: flex;">
-                <div>
-                    <a href="index.php?lang=<?php if($_SESSION['lang'] == 'en'){echo('fr');}else{echo('en');} ?>" class="nav-link">
-                        <svg class="lang" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <rect width="60" height="60" fill="url(#pattern0)"/>
-                            <defs>
-                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use xlink:href="#image0_248_2" transform="scale(0.0078125)"/>
-                            </pattern>
-                            <image id="image0_248_2" width="60" height="60" xlink:href="data:image/png;base64,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"/>
-                            </defs>
-                        </svg>
-                    </a>
-                </div>
-                <div style="width: 90%" class="reseaux-sociaux">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.9968 7.9983C9.79333 7.9983 7.99515 9.79651 7.99515 12C7.99515 14.2035 9.79333 16.0017 11.9968 16.0017C14.2002 16.0017 15.9984 14.2035 15.9984 12C15.9984 9.79651 14.2002 7.9983 11.9968 7.9983ZM23.9987 12C23.9987 10.3429 24.0137 8.70077 23.9206 7.04665C23.8275 5.12536 23.3893 3.4202 21.9843 2.01525C20.5764 0.607602 18.8743 0.172009 16.953 0.0789456C15.2959 -0.0141172 13.6539 0.000892936 11.9998 0.000892936C10.3427 0.000892936 8.70061 -0.0141172 7.04652 0.0789456C5.12526 0.172009 3.42014 0.610605 2.01522 2.01525C0.607291 3.42321 0.172005 5.12536 0.0789442 7.04665C-0.014117 8.70377 0.000892919 10.3459 0.000892919 12C0.000892919 13.6541 -0.014117 15.2992 0.0789442 16.9533C0.172005 18.8746 0.610294 20.5798 2.01522 21.9847C3.42314 23.3927 5.12526 23.828 7.04652 23.9211C8.70361 24.0141 10.3457 23.9991 11.9998 23.9991C13.6569 23.9991 15.2989 24.0141 16.953 23.9211C18.8743 23.828 20.5794 23.3897 21.9843 21.9847C23.3923 20.5768 23.8275 18.8746 23.9206 16.9533C24.0167 15.2992 23.9987 13.6571 23.9987 12ZM11.9968 18.1572C8.58954 18.1572 5.83973 15.4073 5.83973 12C5.83973 8.5927 8.58954 5.84284 11.9968 5.84284C15.404 5.84284 18.1538 8.5927 18.1538 12C18.1538 15.4073 15.404 18.1572 11.9968 18.1572ZM18.406 7.02864C17.6105 7.02864 16.968 6.38621 16.968 5.59067C16.968 4.79513 17.6105 4.1527 18.406 4.1527C19.2015 4.1527 19.8439 4.79513 19.8439 5.59067C19.8442 5.77957 19.8071 5.96667 19.735 6.14124C19.6628 6.31581 19.5569 6.47442 19.4233 6.608C19.2897 6.74157 19.1311 6.84748 18.9565 6.91967C18.782 6.99185 18.5949 7.02888 18.406 7.02864Z" fill="white"/>
+            <div>
+                <a href="index.php?lang=<?php if($_SESSION['lang'] == 'en'){echo('fr');}else{echo('en');} ?>" class="nav-link">
+                    <svg class="lang" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="60" height="60" fill="url(#pattern0)"/>
+                        <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_248_2" transform="scale(0.0078125)"/>
+                        </pattern>
+                        <image id="image0_248_2" width="60" height="60" xlink:href="data:image/png;base64,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"/>
+                        </defs>
                     </svg>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24V15.333H7V12H10V9.333C10 6.333 11.933 4.667 14.667 4.667C15.533 4.667 16.467 4.8 17.333 4.933V8H15.8C14.333 8 14 8.733 14 9.667V12H17.2L16.667 15.333H14V24C19.667 22.994 24 18.034 24 12.067C24 5.43 18.6 0 12 0C5.4 0 0 5.43 0 12.067Z" fill="white"/>
-                    </svg>
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.7206e-07 1.838C2.7206e-07 1.35053 0.193646 0.886032 0.538338 0.53834C0.88603 0.193648 1.35053 2.45031e-06 1.838 2.45031e-06H20.16C20.4016 -0.000392101 20.6409 0.0468654 20.8641 0.139069C21.0874 0.231273 21.2903 0.366612 21.4612 0.537339C21.6322 0.708065 21.7677 0.910826 21.8602 1.13401C21.9526 1.3572 22.0001 1.59643 22 1.838V20.16C22.0003 20.4016 21.9529 20.6409 21.8606 20.8642C21.7683 21.0875 21.6328 21.2904 21.462 21.4613C21.2912 21.6322 21.0884 21.7678 20.8651 21.8602C20.6419 21.9526 20.4026 22.0001 20.161 22H1.838C1.59655 22 1.35746 21.9524 1.1344 21.86C0.911335 21.7676 0.708671 21.6321 0.537984 21.4613C0.367297 21.2905 0.231932 21.0878 0.139623 20.8647C0.0473133 20.6416 -0.000131096 20.4025 2.7206e-07 20.161V1.838ZM8.708 8.388H11.687V9.884C12.117 9.024 13.217 8.25 14.87 8.25C18.039 8.25 18.79 9.963 18.79 13.106V18.928H15.583V13.822C15.583 12.032 15.153 11.022 14.061 11.022C12.546 11.022 11.916 12.111 11.916 13.822V18.928H8.708V8.388ZM3.208 18.791H6.416V8.25H3.208V18.79V18.791ZM6.875 4.812C6.88105 5.08668 6.83217 5.35979 6.73124 5.61532C6.66031 5.87084 6.47935 6.10364 6.28723 6.60003C6.09511 6.49643 5.8657 6.65248 5.61246 6.75901C5.35921 6.86554 5.08724 6.92042 4.8125 6.92042C4.53776 6.92042 4.26579 6.86554 4.01255 6.75901C3.7593 6.65248 3.52989 6.49643 3.33777 6.60003C3.14565 6.10364 2.99469 5.87084 2.89376 5.61532C2.79283 5.35979 2.74395 5.08668 2.75 4.812C2.76187 4.27286 2.98439 3.75979 3.36989 3.38269C3.75539 3.00558 4.27322 2.79442 4.8125 2.79442C5.35178 2.79442 5.86961 3.00558 6.25512 3.38269C6.64062 3.75979 6.86313 4.27286 6.875 4.812Z" fill="white"/>
-                    </svg>
-                </div>
+                </a>
+                <p style="text-transform: uppercase"><?= $lang["goodbye"]?></p>
             </div>
             <hr>
             <div class="copyright">
